@@ -9,6 +9,13 @@ spec:
     spec:
       template:
         spec:
+          volumes:
+          - name: data
+            persistentVolumeClaim:
+              claimName: schedular
+          - name: mucsv-schedular
+            secret:
+              secretName: mucsv-schedular
           containers:
           - name: {{ .Chart.Name }}
             image: {{ .Values.image.name  }}
@@ -17,4 +24,10 @@ spec:
             - /bin/sh
             - -c
             - date; echo Hello from the Kubernetes cluster
+            volumeMounts:
+            - name: data
+              mountPath: /schedular
+            - name: mucsv-schedular
+              readOnly: true
+              mountPath: /opt
           restartPolicy: OnFailure

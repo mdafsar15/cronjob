@@ -1,5 +1,7 @@
 schedule: '"* * * * *"'
 image:
-  name: busybox
+  repository: busybox
+  tag: latest
+  pullPolicy: IfNotPresent 
 namespace: cronjob
 
