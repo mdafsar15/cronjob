@@ -25,7 +25,7 @@ spec:
               - -c
               - |
                 sleep 2 
-                "./bin/console {{ $.Values.command }}"
+                "./bin/console --env={{ $.Values.command }}"
                 sleep 30 
             volumeMounts:
             - name: data
