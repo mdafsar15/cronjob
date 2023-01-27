@@ -21,9 +21,9 @@ spec:
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: IfNotPresent
             command:
-              - /bin/sh
-              - -c
-              - date; echo Hello from the Kubernetes cluster
+            - /bin/sh
+            - -c
+            - date; echo Hello from the Kubernetes cluster
             volumeMounts:
             - name: data
               mountPath: /schedular
