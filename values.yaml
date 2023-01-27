@@ -1,11 +1,15 @@
-schedule: '"* * * * *"'
-command:
-- /bin/sh
-- -c
-- date; echo Hello from the Kubernetes cluster
+env: dev
 image:
   repository: busybox
   tag: latest
   pullPolicy: IfNotPresent 
 namespace: cronjob
+crons:
+ "0":
+command:
+- /bin/sh
+- -c
+- date; echo Hello from the Kubernetes cluster
+schedule: '"* * * * *"'
+
 
