@@ -1,3 +1,3 @@
-schedule: '"*/10 * * * *"'
+schedule: '"* * * * *"'
 image:
   name: busybox
