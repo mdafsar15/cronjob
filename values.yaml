@@ -1,5 +1,5 @@
 schedule: '"* * * * *"'
-command: /opt/mucsv_schedular.sh
+command: echo Hello from the Kubernetes cluster
 image:
   repository: busybox
   tag: latest
