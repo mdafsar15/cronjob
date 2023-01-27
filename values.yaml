@@ -1,6 +1,7 @@
 env: dev
- schedule: '"* * * * *"'
+ name: mucsv-cron
  command: /opt/mucsv_schedular.sh
+ schedule: '"* * * * *"'
 image:
   repository: busybox
   tag: latest
