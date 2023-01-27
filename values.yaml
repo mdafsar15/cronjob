@@ -1,5 +1,6 @@
-schedule: '"* * * * *"'
-command: /opt/mucsv_schedular.sh
+env: dev
+ schedule: '"* * * * *"'
+ command: /opt/mucsv_schedular.sh
 image:
   repository: busybox
   tag: latest
