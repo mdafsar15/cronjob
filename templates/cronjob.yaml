@@ -26,7 +26,7 @@ spec:
             - date; echo Hello from the Kubernetes cluster
             volumeMounts:
             - name: data
-              mountPath: /schedular
+              mountPath: /wallet
             - name: mucsv-schedular
               readOnly: true
               mountPath: /opt
