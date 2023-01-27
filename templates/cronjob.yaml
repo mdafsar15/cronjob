@@ -20,15 +20,10 @@ spec:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: IfNotPresent
-            args:
-              - sh
+            command:
+              - /bin/sh
               - -c
-              - |
-                sleep 2 
-                "- /bin/sh
-                 - -c
-                 - date; echo Hello from the Kubernetes cluster"
-                sleep 30 
+              - date; echo Hello from the Kubernetes cluster
             volumeMounts:
             - name: data
               mountPath: /schedular
