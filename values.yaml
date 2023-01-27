@@ -1,4 +1,4 @@
-env: cronjob
+env:
 image:
   repository: busybox
   tag: latest
