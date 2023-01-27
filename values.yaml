@@ -1,4 +1,6 @@
+name: cronjob
+namespace: cronjob
 schedule: '"* * * * *"'
 image:
   name: busybox
-  namespace: mucsv-cronjon
+
