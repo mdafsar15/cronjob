@@ -23,7 +23,7 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; /opt/while.sh
+            - date; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
             volumeMounts:
             - name: data
               mountPath: /schedular
