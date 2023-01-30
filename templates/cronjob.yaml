@@ -23,7 +23,7 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; echo Hello from the Kubernetes cluster
+            - date; /opt/while.sh
             volumeMounts:
             - name: data
               mountPath: /schedular

@@ -1,7 +1,7 @@
 schedule: '"* * * * *"'
 image:
-  repository: busybox
-  tag: latest
+  repository: ubuntu
+  tag: 20.04
   pullPolicy: IfNotPresent 
 namespace: cronjob
 

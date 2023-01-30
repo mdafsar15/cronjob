@@ -4,7 +4,7 @@ metadata:
   name: schedular
   namespace: {{ .Values.namespace }}
 spec:
-  storageClassName: local-storage
+  storageClassName: nfs-client
   accessModes:
     - ReadWriteOnce
   resources:
