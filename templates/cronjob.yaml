@@ -13,9 +13,9 @@ spec:
           - name: data
             persistentVolumeClaim:
               claimName: schedular
-          - name: while
+          - name: mucsv-schedular
             secret:
-              secretName: while
+              secretName: mucsv-schedular
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -27,7 +27,7 @@ spec:
             volumeMounts:
             - name: data
               mountPath: /schedular
-            - name: while
+            - name: mucsv-schedular
               readOnly: true
               mountPath: /opt
           restartPolicy: OnFailure
