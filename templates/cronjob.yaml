@@ -23,7 +23,7 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
+            - date; apt update; apt install curl; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
             volumeMounts:
             - name: data
               mountPath: /schedular
