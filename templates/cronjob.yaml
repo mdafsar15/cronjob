@@ -20,10 +20,7 @@ spec:
           - name: {{ .Values.crons.name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: IfNotPresent
-            command:
-            - /bin/sh
-            - -c
-            - date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
+            command: {{ .Values.crons.command }}
             volumeMounts:
             - name: data
               mountPath: /schedular
