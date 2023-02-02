@@ -1,11 +1,11 @@
 cronjobs:
   - id: job-1
     name: job-1
-    command: "date; echo Completed job 1"
+    command: "date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh"
     schedule: "* * * * *"
   - id: job-2
     name: job-2
-    command: "date; echo Completed job 2"
+    command: "date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh"
     schedule: "* * * * *"
 
   - id: job-3
