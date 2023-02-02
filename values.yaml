@@ -21,5 +21,3 @@ cronjobs:
     name: job-4
     command: "date; echo Completed job 4"
     schedule: "* * * * *"
- 
-
