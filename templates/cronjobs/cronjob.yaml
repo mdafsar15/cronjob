@@ -8,7 +8,7 @@ metadata:
   name: {{ $cronjob.id }}
   namespace: cronjob
 spec:
-  schedule: {{ $cronjob.schedule }}
+  schedule: "{{ $cronjob.schedule }}"
   jobTemplate:
     spec:
       template:
@@ -21,10 +21,9 @@ spec:
             secret:
               secretName: while
           containers:
-          - name: mucsv-cron
+          - name: cron-runner
             image: busybox:1.28
-            imagePullPolicy: IfNotPresent
-            args:
+            command:
             - /bin/sh
             - -c
             - {{ $cronjob.command }}
@@ -37,4 +36,4 @@ spec:
           restartPolicy: OnFailure
 
 
-{{- end }} 
+{{- end }}          

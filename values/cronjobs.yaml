@@ -1,0 +1,19 @@
+cronjobs:
+  - id: job-1
+    name: job-1
+    command: "date; echo Completed job 1"
+    schedule: "* * * * *"
+  - id: job-2
+    name: job-2
+    command: "date; echo Completed job 2"
+    schedule: "* * * * *"
+
+  - id: job-3
+    name: job-3
+    command: "date; echo Completed job 3"
+    schedule: "* * * * *"
+
+  - id: job-4
+    name: job-4
+    command: "date; echo Completed job 4"
+    schedule: "* * * * *"
