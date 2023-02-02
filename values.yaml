@@ -1,8 +1,8 @@
+namespace: cronjob
 image:
   repository: ubuntu
   tag: 20.04
   pullPolicy: IfNotPresent 
-namespace: cronjob
 crons:
  "0":
  name: mucsv-cron
