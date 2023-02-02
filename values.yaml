@@ -10,11 +10,11 @@ crons:
  schedule: '"* * * * *"'
  "1":
  name: mucsv-cron1
- command: date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
+ command: date; echo 'hello second'
  schedule: '"* * * * *"'
  "2":
  name: mucsv-cron2
- command: date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
+ command: date; echo 'hello third'
  schedule: '"* * * * *"'
  
 
