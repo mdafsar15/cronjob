@@ -1,10 +1,18 @@
+{{- range $cronjob := $.Values.cronjobs }}
+
+---
+
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: cronjob
+  name: {{ $cronjob.id }}
   namespace: {{ .Values.namespace }}
+  labels:
+    app.kubernetes.io/name: {{ $cronjob.id }}
+    app.kubernetes.io/component: cronjob
+    app.kubernetes.io/instance: api
 spec:
-  schedule: {{ .Values.crons.schedule }}
+  schedule: {{ $cronjob.schedule }}
   jobTemplate:
     spec:
       template:
@@ -23,7 +31,7 @@ spec:
             args:
             - /bin/sh
             - -c
-            - {{ .Values.crons.command }}
+            - {{ $cronjob.command }}
             volumeMounts:
             - name: data
               mountPath: /schedular
@@ -31,3 +39,6 @@ spec:
               readOnly: false
               mountPath: /opt
           restartPolicy: OnFailure
+
+
+{{- end }} 
