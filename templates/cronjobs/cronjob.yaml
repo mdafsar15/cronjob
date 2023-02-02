@@ -21,7 +21,7 @@ spec:
             secret:
               secretName: while
           containers:
-          - name: cron-runner
+          - name: mucsv-cron
             image: busybox:1.28
             command:
             - /bin/sh
