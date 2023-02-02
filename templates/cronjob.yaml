@@ -6,7 +6,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: {{ $cronjob.id }}
-  namespace: cronjob
+  namespace: {{ .Values.namespace }}
 spec:
   schedule: "{{ $cronjob.schedule }}"
   jobTemplate:
@@ -21,8 +21,8 @@ spec:
             secret:
               secretName: while
           containers:
-          - name: mucsv-cron
-            image: busybox:1.28
+          - name: {{ .Values.name }}
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             command:
             - /bin/sh
             - -c
