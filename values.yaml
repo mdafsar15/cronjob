@@ -7,5 +7,9 @@ namespace: cronjob
 crons:
  "0":
  name: mucsv-cron
+ command:
+ - /bin/sh
+ - -c
+ - date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
  
 
