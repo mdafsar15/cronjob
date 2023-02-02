@@ -6,7 +6,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: {{ $cronjob.id }}
-  namespace: {{ .Values.namespace }}
+  namespace: cronjob
 spec:
   schedule: "{{ $cronjob.schedule }}"
   jobTemplate:
