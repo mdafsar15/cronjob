@@ -1,4 +1,3 @@
-schedule: '"* * * * *"'
 image:
   repository: ubuntu
   tag: 20.04
@@ -8,5 +7,6 @@ crons:
  "0":
  name: mucsv-cron
  command: date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
+ schedule: '"* * * * *"'
  
 
