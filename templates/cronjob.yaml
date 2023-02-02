@@ -1,8 +1,9 @@
+{{- range $job, $val := .Values.cronjob.crons }}
 apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: cronjob
-  namespace: {{ .Values.env }}
+  namespace: {{ .Values.namespace }}
 spec:
   schedule: {{ .Values.crons.schedule }}
   jobTemplate:
@@ -31,3 +32,5 @@ spec:
               readOnly: false
               mountPath: /opt
           restartPolicy: OnFailure
+---
+{{- end}}
