@@ -11,10 +11,10 @@ crons:
  "1":
  name: mucsv-cron1
  command: date; echo 'hello second'
- schedule: '"0/3 * * * *"'
+ schedule: '"* * * * *"'
  "2":
  name: mucsv-cron2
  command: date; echo 'hello third'
- schedule: '"0/5 * * * *"'
+ schedule: '"* * * * *"'
  
 
