@@ -22,7 +22,7 @@ spec:
               secretName: while
           containers:
           - name: mucsv-cron
-            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            image: ubuntu:20.04
             command:
             - /bin/sh
             - -c
