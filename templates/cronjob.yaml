@@ -4,7 +4,7 @@ metadata:
   name: cronjob
   namespace: {{ .Values.env }}
 spec:
-  schedule: {{ .Values.crons.schedule }}
+  schedule: {{ .Values.crons.schedule | quote }}
   jobTemplate:
     spec:
       template:
