@@ -32,3 +32,5 @@ spec:
               readOnly: false
               mountPath: /opt
           restartPolicy: OnFailure
+---
+{{- end}}
