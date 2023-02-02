@@ -21,7 +21,7 @@ spec:
             secret:
               secretName: while
           containers:
-          - name: {{ .Values.name }}
+          - name: mucsv-cron
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             command:
             - /bin/sh
