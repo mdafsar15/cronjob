@@ -26,7 +26,7 @@ spec:
               secretName: while
           containers:
           - name: mucsv-cron
-            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            image: busybox:1.28
             imagePullPolicy: IfNotPresent
             args:
             - /bin/sh
