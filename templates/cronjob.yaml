@@ -17,7 +17,7 @@ spec:
             secret:
               secretName: while
           containers:
-          - name: {{ .Values.crons.name }}
+          - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: IfNotPresent
             command:
