@@ -20,7 +20,6 @@ spec:
           - name: {{ .Values.crons.name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: IfNotPresent
-            schedule: {{ .Values.crons.schedule }}
             command:
             - /bin/sh
             - -c
