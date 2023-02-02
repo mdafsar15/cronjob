@@ -8,5 +8,13 @@ crons:
  name: mucsv-cron
  command: date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
  schedule: '"* * * * *"'
+ "1":
+ name: mucsv-cron1
+ command: date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
+ schedule: '"* * * * *"'
+ "2":
+ name: mucsv-cron2
+ command: date; apt update; apt install curl -y; cp /opt/while.sh /tmp/while.sh; chmod +x /tmp/while.sh; /tmp/while.sh
+ schedule: '"* * * * *"'
  
 
